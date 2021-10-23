@@ -8,9 +8,10 @@
       -DFAISS_ENABLE_PYTHON=ON \
       -DPython_EXECUTABLE=$PYTHON \
       -DBLA_VENDOR=Intel10_64_dyn \
+      -DFAISS_OPT_LEVEL=avx2 \
       -DMKL_LIBRARIES=/root/anaconda3/lib \
       -DCMAKE_INSTALL_LIBDIR=/root/anaconda3/lib \
       -DCMAKE_BUILD_TYPE=Release .
 
-#-DFAISS_OPT_LEVEL=avx2 \
+
 make -C _build -j $CPU_COUNT 
